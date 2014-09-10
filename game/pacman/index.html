@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SSG - 吃豆人</title>
+
+
+    <link href="/asset/css/common.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+
+      body {
+        background-color: #000; 
+      }
+
+      @font-face {
+      font-family: 'BDCartoonShoutRegular';
+        src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      }
+      #pacman {
+        height:450px;
+        width:342px;
+        margin:20px auto;
+        position: relative;
+      }
+      #shim { 
+        font-family: BDCartoonShoutRegular; 
+        position:absolute;
+        visibility:hidden
+      }
+      h1 { font-family: BDCartoonShoutRegular; text-align:center; }
+      body { width:342px; margin:0px auto; font-family:sans-serif; }
+      .game-pass {
+        position: absolute;
+        width: 288px;
+        height: 99px;
+        left: 40px;
+        top: 89px;
+        background-image: url(/asset/img/game-passed.png);
+        background-size: 100% auto;
+        background-repeat: none;
+        z-index: 100;
+        display: none;
+      }
+
+      .next-game {
+        position: absolute;
+        width: 107px;
+        height: 38px;
+        left: 120px;
+        top: 240px;
+        background-image: url(/asset/img/next-game.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 100;
+        display: none;
+      }
+    </style>
+</head>
+
+<body>
+  
+  <div id="shim">shim for font face</div>
+
+  <h1 class="title">吃豆人</h1>
+
+  <div id="pacman">
+    
+      <div id="gamePass" class="game-pass-block">
+        <div class="game-pass"></div>
+      </div>
+      <div>
+        <div id="nextGame" class="next-game"></div>
+      </div>
+  </div>
+
+  <div class="game-info">
+    <h3>游戏说明</h3>
+    
+    <p class="info-title">玩法介绍：</p>
+    <p class="info-desc">1. 按<b>回车</b>开始游戏</p>
+    <p class="info-desc">2. 按方向键移动吃豆人</p>
+    <p class="info-desc">3. 如果被怪物碰到，生命减一</p>
+    <p class="info-desc">4. 共有3条生命</p>
+    <p class="info-desc">5. 按<b>S</b>键可以切换声音</p>
+
+    <p class="info-title">过关条件：</p>
+    <p class="info-desc">吃掉所有豆子</p>    
+  </div>
+
+  <div class="user-info" style="color:#FFF">
+    <a href="/" style="color:#FFF">首页</a>
+    <span>|</span>
+    <span id="userName" class="user-name" style="color:#FFF"></span>
+    <span>|</span>
+    <a href="/user/userLogout.action" class="log-out" style="color:#FFF"><span id="logout">退出</span></a>
+  </div>
+
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="modernizr-1.5.min.js"></script>
+
+  <!-- [__debug__]
+  <script src="/asset/js/pacman.min.js"></script>
+  [__debug__] -->
+  
+  <script src="/dep/store.js"></script><!-- [__debug__] -->
+  <script src="/src/common.js"></script><!-- [__debug__] -->
+  <script src="/game/pacman/pacman.js"></script><!-- [__debug__] -->
+  
+  <script>
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
+</body>
+</html>

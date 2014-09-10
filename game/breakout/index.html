@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>SSG - 打砖块</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width", initial-scale=1.0, user-scalable="no"/>
+
+  <link href="breakout.css" media="screen, print" rel="stylesheet" />
+  <link href="/asset/css/common.css" media="screen" rel="stylesheet" />
+</head>
+ 
+<body>
+  <div id="breakout">
+    <canvas id="canvas">
+      <div class='unsupported'>
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+    <div id="levels" style="display:none;">
+      <img id="next" class="disabled" src="images/up.png"   title="next level">
+      <img id="prev" class="disabled" src="images/down.png" title="previous level">
+      <span id="label">level:</span><span id="level"></span>
+    </div>
+    <div id="controls">
+      <input id='sound' type='checkbox' />
+      <label for='sound'>sound</label>
+    </div>
+    <div id="instructions" style='display:none;'>
+      <div class='keyboard'>
+        <b>空格</b>开始<br>
+        <b>左/右</b>移动托条<br>
+      </div>
+      <div class='touch'>
+        <b>touch here</b> to start<br>
+        <b>drag</b> paddle to move<br>
+      </div>
+    </div>
+    <div id="gamePass" class="game-pass-block">
+      <div class="game-pass"></div>
+    </div>
+    <div>
+      <div id="nextGame" class="next-game"></div>
+    </div>
+  </div>
+
+  <div class="game-info">
+    <h3>游戏说明</h3>
+    
+    <p class="info-title">玩法介绍：</p>
+    <p class="info-desc">1. 按<b>空格</b>开始游戏</p>
+    <p class="info-desc">2. 左右移动托盘如避免子弹落下</p>
+    <p class="info-desc">3. 如果托盘未能接住子弹，生命减一</p>
+    <p class="info-desc">4. 共有3条生命</p>
+
+    <p class="info-title">过关条件：</p>
+    <p class="info-desc">消除图中所有方块</p>
+  </div>
+
+  <div class="user-info" style="color:#000">
+    <a href="/" style="color:#000">首页</a>
+    <span>|</span>
+    <span id="userName" class="user-name" style="color:#000"></span>
+    <span>|</span>
+    <a href="/user/userLogout.action" class="log-out" style="color:#000"><span id="logout">退出</span></a>
+  </div>
+
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+  <!-- [__debug__]
+  <script src="/asset/js/breakout.min.js"></script>
+  [__debug__] -->
+  <script src="/dep/store.js"></script><!-- [__debug__] -->
+  <script src="/src/common.js"></script><!-- [__debug__] -->
+  <script src="/game/breakout/game.js"></script><!-- [__debug__] -->
+  <script src="/game/breakout/breakout.js"></script><!-- [__debug__] -->
+  <script src="/game/breakout/levels.js"></script><!-- [__debug__] -->
+
+  <script>
+    Game.ready(function() {
+      var game = Game.start('canvas', Breakout);
+    });
+  </script>
+</body> 
+</html>

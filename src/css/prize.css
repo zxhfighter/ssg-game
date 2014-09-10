@@ -1,0 +1,425 @@
+.wrapper {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.start-btn {
+    position: absolute;
+    background: url(/asset/img/button.png) no-repeat;
+    height: 130px;
+    width: 128px;
+    z-index: 100;
+    top: 50%;
+    margin-top: -65px;
+    left: 50%;
+    margin-left: -64px;
+    cursor: pointer;
+}
+
+.start-btn-disable {
+    background: #EFE;
+    cursor: default;
+    color: #CCC;
+}
+
+.round-outer {
+    position: relative;
+    background: url(/asset/img/out.png) no-repeat;
+    width: 530px;
+    height: 513px;
+    margin: 0 auto;
+　　background-color: #fb9a39;
+    margin-top: -100px;
+}
+
+.round-inner {
+    width: 530px;
+    height: 513px;
+    background: url(/asset/img/in001.png) no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 6px;
+}
+
+.arrow {
+    position: absolute;
+    width: 72px;
+    height: 130px;
+    background: url(/asset/img/arrow3.png) no-repeat;
+    left: 50%;
+    top: 50%;
+    margin-left: -38px;
+    margin-top: -120px;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+}
+
+.horse {
+    background: url(/asset/img/horse-1.png) no-repeat;
+    width: 419px;
+    height: 411px;
+    bottom: -162px;
+    position: absolute;
+    left: 70px;
+    z-index: -1;
+}
+
+.ribbon {
+    background: url(/asset/img/ribbon.png) no-repeat;
+    width: 2130px;
+    height: 103px;
+    z-index: -2;
+    margin-left: -800px;
+    bottom: -137px;
+    position: absolute;
+}
+
+.light {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #FFF;
+    animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite; /* Firefox */
+    -webkit-animation: blink 1s infinite; /* Safari and Chrome */
+    -o-animation: blink 1s infinite; /* Opera */
+}
+
+.light-0 {
+    left: 554px;
+    top: 276px;
+    -webkit-animation-delay: .25s;
+    animation-delay: .25s;
+}
+
+.light-45 {
+    left: 476px;
+    top: 87px;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.light-90 {
+    left: 276px;
+    top: 5px;
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s;
+}
+
+.light-135 {
+    left: 85px;
+    top: 87px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.light-180 {
+    left: 5px;
+    top: 276px;
+    -webkit-animation-delay: 1.25s;
+    animation-delay: 1.25s;
+}
+
+.light-225 {
+    left: 91px;
+    top: 480px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.light-270 {
+    left: 276px;
+    top: 555px;
+    -webkit-animation-delay: 1.75s;
+    animation-delay: 1.75s;
+}
+
+.light-315 {
+    left: 473px;
+    top: 473px;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.invite-friends {
+    position: absolute;
+    right: -400px;
+    top: 100px;
+    border: 1px solid #bce8f1;
+    background-color: #d9edf7;
+    padding: 20px;
+    width: 280px;
+    color: #3a87ad;
+    box-shadow: 0 0 20px #FFF;
+    transition: right 0.5s ease-in;
+    margin-right: -140px;
+}
+
+.invite-friends h3 {
+    margin: 5px 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.invite-friends p {
+    font-size: 13px;
+    color: #3a87ad;
+    margin: 20px 0;
+}
+
+.invite-friends .btn-login {
+    margin-left: 175px;
+    margin-top: 20px;
+}
+
+.egg-wrapper {
+    position: absolute;
+    left: 600px;
+    top: 180px;
+}
+
+.egg {
+    position: absolute;
+    width: 100px;
+    height: 128px;
+}
+
+.egg-left {
+    background: url(/asset/img/egg-left.png) no-repeat;
+    width: 54px;
+    height: 128px;
+    transform: rotate(0deg);
+    transform-origin: right 100%;
+    transition: transform 0.5s ease-in;
+}
+
+.egg-right {
+    background: url(/asset/img/egg-right.png) no-repeat;
+    width: 48px;
+    height: 128px;
+    margin-left: -11px;
+    transform: rotate(0deg);
+    transform-origin: left 100%;
+    transition: transform 0.5s ease-in;
+}
+
+.egg-text {
+    color: #ff0;
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: 'Microsoft YAHEI';
+    position: absolute;
+    left: 20;
+    left: -27px;
+    top: 30px;
+    width: 250px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    font-size: 0
+}
+
+.input-group-addon {
+    display: inline-block;
+    font-size: 14px;
+    background-color: #68A2A9;
+    border: 1px solid #7299A7;
+    border-left: none;
+    padding: 9px 5px;
+    color: #EFE;
+    font-weight: 700
+}
+
+.btn-login {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    border: 1px solid #5580A1;
+    padding: 9px 30px;
+    color: #EFE;
+    background-color: #5580A1;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-transition: background-color .25s linear;
+    transitiona: background-color .25s linear
+}
+.btn-login:hover {
+    background-color: #68A2A9
+}
+
+@-webkit-keyframes blink {
+    0% { background-color: #0F0; }
+    100% { background-color: #FFF; }
+}
+
+@keyframes blink {
+    0% { background-color: #0F0; }
+    100% { background-color: #FFF; }
+}
+
+.prize-info {
+    z-index: 200;
+    width: 624px;
+    border-radius: 10px;
+    background-color: #f7f6e1;
+    font-size: 24px;
+    font-color: #333;
+    font-family: 'Microsoft YAHEI';
+    position: absolute;
+    box-shadow: 0px 0px 20px #ff9933;
+    left: 50%;
+    margin-left: -312px;
+    top: 50%;
+    margin-top: -110px;
+}
+
+.prize-info-text {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.prize-info-text span {
+    font-size: 30px;
+    color: #1cbdb9;
+    font-weight: bolder;
+}
+
+.prize-info-img {
+    background: url(/asset/img/singleenjoy.png) no-repeat;
+    width: 456px;
+    height: 24px;
+    margin: 10px auto;
+    padding-bottom: 70px;
+}
+
+.tell-friends {
+    background: url(/asset/img/tell-friends.png) no-repeat;
+    width: 165px;
+    height: 165px;
+    margin: 10px auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -83px;
+    top: 72px;
+    cursor: pointer;
+}
+
+.friends-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+@media screen and (max-height: 800px) {
+    .friends-wrapper {
+        margin-top: -200px;
+    }
+}
+
+.prize-box {
+    width: 412px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.prize-box-bg {
+    background: url(/asset/img/prize-box.png) no-repeat;
+    width: 412px;
+    height: 372px;
+}
+
+.prize-box-text {
+    position: absolute;
+    left: 78px;
+    top: 160px;
+    width: 258px;
+    color: #586865;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: 'Microsoft YAHEI';
+    text-align: center;
+}
+
+@media screen and (max-height: 800px) {
+    .prize-box {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .prize-box-bg {
+        background: url(/asset/img/prize-box-small.png) no-repeat;
+        width: 250px;
+        height: 226px;
+    }
+
+    .friends-wrapper {
+        margin-top: -50px;
+    }
+
+    .prize-box-text {
+        width: 150px;
+        left: 50px;
+        top: 85px;
+        font-size: 18px;
+    }
+}
+
+.prize-line {
+    background: url(/asset/img/text-bg.jpg) no-repeat;
+    width: 930px;
+    height: 47px;
+}
+
+.inputs {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.input-wrapper {
+    margin-top: 10px;
+}
+
+.input-wrapper .text {
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    background: transparent;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    color: #FFF;
+}
+
+
+.input-wrapper .text:focus {
+    box-shadow: 0 0 20px #FFF;
+    -webkit-animation: glow 0.7s linear infinite;;
+    -o-animation: glow 0.7s linear infinite;;
+    animation: glow 0.7s linear infinite;;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #CCC;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #CCC;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #CCC;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #CCC;
+}
+
+.button-block {
+    width: 165px;
+    margin: 0 auto;
+}
+
+.btn-invite {
+    background: url(/asset/img/tell-friends.png) no-repeat;
+    width: 165px;
+    height: 165px;
+    cursor: pointer;
+}

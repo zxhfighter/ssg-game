@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- [__debug__]
+    <link rel="stylesheet" href="asset/css/prize.min.css">
+    [__debug__] -->
+
+    <link rel="stylesheet" href="src/css/common.css"><!-- [__debug__] -->
+    <link rel="stylesheet" href="src/css/prize.css"><!-- [__debug__] -->
+</head>
+<body>
+
+    <!--[if lt IE 9]>
+        <script>
+            window.location.replace('/ie.html');
+        </script>
+    <![endif]-->
+
+    <div class="header"><h1></h1></div>
+    <div class="wrapper">
+        <div class="round-outer" style="display: none;">
+            <div class="round-inner"></div>
+            <div class="start-btn"></div>
+
+            <div class="arrow"></div>
+
+            <div class="egg-wrapper" style="display:none;">
+                <div class="egg clearfix">
+                    <div class="egg-left fl"></div>
+                    <div class="egg-right fl"></div>
+                </div>
+                <div class="egg-text" style="display:none;">
+                    京东卡一张！
+                </div>
+            </div>
+
+            <div class="horse"></div>
+            <div class="ribbon"></div>
+        </div>
+
+
+        <div class="invite-friends">
+            <h3>点名好友</h3>
+
+            <p>您已经获取奖品：<span style="color:red"></span></p>
+            <p>独乐乐不如众乐乐，快快告诉好友来玩吧！</p>
+
+            <div class="friend-form">
+                <div class="input-group" style="margin-bottom: 10px;">
+                    <input type="text" class="text">
+                    <span class="input-group-addon">@baidu.com</span>
+                </div>
+                <div class="input-group" style="margin-bottom: 10px;">
+                    <input type="text" class="text">
+                    <span class="input-group-addon">@baidu.com</span>
+                </div>
+                <div class="input-group" style="margin-bottom: 10px;">
+                    <input  type="text" class="text">
+                    <span class="input-group-addon">@baidu.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="friends-wrapper" style="display: none;">
+        <div class="prize-box">
+            <div class="prize-box-bg"></div>
+            <div class="prize-box-text"><span class="prizeName"></span></div>      
+        </div>
+        
+        <div class="prize-line"></div>
+
+        <div class="inputs">
+            <div class="input-wrapper">
+                <input id="firstFriendName" type="text" class="text" placeholder="请输入好友邮箱">
+            </div>
+            <div class="input-wrapper">
+                <input id="secondFriendName" type="text" class="text" placeholder="请输入好友邮箱">
+            </div>
+            <div class="input-wrapper">
+                <input id="thirdFriendName" type="text" class="text" placeholder="请输入好友邮箱">
+            </div>
+        </div>
+
+        <div class="button-block">
+            <div id="btnInvite" class="btn-invite"></div>
+        </div>
+    </div>
+
+    <div class="user-info" style="color:#FFF">
+        <a href="/" style="color:#FFF">首页</a>
+        <span>|</span>
+        <span id="userName" class="user-name" style="color:#FFF"></span>
+        <span>|</span>
+        <a href="/user/userLogout.action" class="log-out" style="color:#FFF"><span id="logout">退出</span></a>
+    </div>
+
+    <div class="footer-mark"></div>
+
+    <div class="footer">
+        &copy;2014 Baidu 有任何问题请联系<a href="mailto:ssg-elight@baidu.com">ssg-elight@baidu.com</a>
+    </div>
+
+    <div class="overlay" style="display: none;"></div>
+    <div class="prize-info" style="display: none;">
+        <div class="prize-info-text">
+            您已经获取奖品：<span class="prizeName">味多美</span>
+        </div>
+        <div class="prize-info-img"></div>
+        <div class="tell-friends"></div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script ></script>
+
+    <!-- [__debug__]
+    <script src="asset/js/prize.min.js"></script>
+    [__debug__] -->
+    <script src="dep/store.js"></script><!-- [__debug__] -->
+    <script src="dep/jQueryRotate.2.2.js"></script><!-- [__debug__] -->
+    <script src="src/common.js"></script><!-- [__debug__] -->
+    <script src="src/prize.js"></script> <!-- [__debug__] -->
+</body>
+</html>

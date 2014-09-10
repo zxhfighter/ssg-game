@@ -1,0 +1,20 @@
+{
+    "data": {
+        "prizes": [
+            {
+                "prizeId": 1,
+                "prizeCount": 12
+            },
+            {
+                "prizeId": 2,
+                "prizeCount": 10
+            }
+        ]
+    },
+
+    "status": 0,
+
+    "msg": [],
+
+    "statusInfo": {}
+}

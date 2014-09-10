@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSG - 看你有多色</title>
+
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="src/color.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="game-wrapper">
+            <h3>
+                <span class="c1">看</span>
+                <span class="c2">你</span>
+                <span class="c3">有</span>
+                <span class="c4">多</span>
+                <span class="c5">色</span>
+            </h3>
+
+            <div class="controls clearfix">
+
+                <div class="scores fl clearfix">
+                    <div id="countdown" class="count-down fl">60</div>
+                    <div id="level" class="level fl">1</div>
+                </div>
+                
+                <div id="btnStart" class="btn btn-blue fr">开 始</div>
+            </div>
+
+            <div id="colorBox" class="color-box clearfix"></div>
+
+            <div class="layer" style="display:none;">
+                <div id="btnContinue" id="btn" class="btn btn-blue fr">继 续</div>
+            </div>
+
+            <div id="gamePass" class="game-pass-block">
+                <div class="game-pass" style="left: 138px; top: 300px;"></div>
+            </div>
+            <div>
+                <div id="nextGame" class="next-game" style="left: 218px; top: 450px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-info">
+        <h3>游戏说明</h3>
+        
+        <p class="info-title">玩法介绍：</p>
+        <p class="info-desc">1. 按右上角的<b>开始</b></p>
+        <p class="info-desc">2. 找出颜色不同的方块，点击进入下一关</p>
+
+        <p class="info-title">过关条件：</p>
+        <p class="info-desc">1分钟内过<b>30</b>关</p>
+
+    </div>
+
+    <div class="user-info" style="color:#000">
+        <a href="/" style="color:#000">首页</a>
+        <span>|</span>
+        <span id="userName" class="user-name" style="color:#000"></span>
+        <span>|</span>
+        <a href="/user/userLogout.action" class="log-out" style="color:#000"><span id="logout">退出</span></a>
+      </div>
+    
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="asset/js/soundmanager2-nodebug-jsmin.js"></script>
+
+    <!-- [__debug__]
+    <script src="/asset/js/color.min.js"></script>
+    [__debug__] -->
+    
+    <script src="/dep/store.js"></script><!-- [__debug__] -->
+    <script src="/src/common.js"></script><!-- [__debug__] -->
+    <script src="/game/color/src/color.js"></script><!-- [__debug__] -->
+</body>
+</html>

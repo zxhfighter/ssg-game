@@ -1,0 +1,82 @@
+jQuery(function () {
+    SSG.Color.init(); 
+});
+
+var SSG = SSG || {};
+
+SSG.Color = (function(){
+    var box = jQuery('#colorBox');
+    var boxTpl = '<span style="background-color: {0}; width: {1}; height: {1}"></span>';
+    var randomPos = 0;
+    var rows = 2;
+    var mainColor = 'rgb(10, 10, 10)';
+    var lightColor = 'rgb(200, 20, 10)';
+    var level = 1;
+    
+    function init() {
+        draw();
+    }
+
+    function draw() {
+        var htmlStr = [];
+        var width = (1 / rows) * 100 + '%';
+        randomPos = Math.floor(Math.random() * rows * 2);
+        for (var i = 0; i < rows * rows; i++) {
+            if (i === randomPos) {
+                htmlStr.push(format(boxTpl, lightColor, width));
+            }
+            else {
+                htmlStr.push(format(boxTpl, mainColor, width));
+            }
+        }
+
+        box.html(htmlStr.join(''));
+
+        // 绑定事件
+        jQuery('#colorBox span').on('click', function (evt) {
+            var pos = jQuery('#colorBox span').index(evt.target);
+
+            if (pos === randomPos) {
+                rows += getFrequency(level);
+                level += 1;
+                console.log(rows);
+                draw();
+            }
+        });
+    }
+
+    function format(source, opts) {
+        if ('[object Object]' == Object.prototype.toString.call(opts)) {
+            return source.replace(/\$\{(.+?)\}/g,
+                function (match, key) {
+                    var replacer = opts[key];
+                    if ('function' == typeof replacer) {
+                        replacer = replacer(key);
+                    }
+                    return ('undefined' == typeof replacer ? '' : replacer);
+                });
+        } else {
+            var data = Array.prototype.slice.call(arguments, 1),
+                len = data.length;
+            return source.replace(/\{(\d+)\}/g,
+                function (match, index) {
+                    index = parseInt(index, 10);
+                    return (index >= len ? match : data[index]);
+                });
+        }
+    }
+
+    function getFrequency(level) {
+        var levels = [1, 2, 3, 6, 9, 12, 18, 26, 30, 30, 35, 40, 45, 50];
+        if (levels.indexOf(level) != -1) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    return {
+        init: init
+    };
+})();

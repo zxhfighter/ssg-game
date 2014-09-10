@@ -1,0 +1,259 @@
+/* ---- 首页 ---- */
+.game-center {
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+@media screen and (max-height: 800px) {
+    .game-center {
+        margin-top: -60px;
+    }
+}
+
+.games {
+    width: 650px;
+    border: 20px solid #FFF;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+.games li {
+    position: relative;
+    float: left;
+    padding: 5px;
+    margin: 0;
+    line-height: 240px;
+    text-align: center;
+    opacity: 0;
+    box-shadow: 0px 0px 10px #EEE;
+}
+
+.games li a {
+    display: block;
+    width: 200px;
+    height: 160px;
+    background-size: 100% 100%;
+}
+
+.games li a:hover {
+    box-shadow: 0px 0px 20px #1bbdb8;
+}
+
+.games li.passed a::after {
+    display: block;
+    position: absolute;
+    background: url('/asset/img/badget_4.png') no-repeat;
+    background-size: 100% 100%;
+    width: 140px;
+    height: 150px;
+    left: 38px;
+    top: 14px;
+    content: ' ';
+}
+.game-1024 {
+    background: url('/asset/img/2048.png') no-repeat;
+}
+.game-bird {
+    background: url('/asset/img/flappy-bird.png') no-repeat;
+}
+.game-breakout {
+    background: url('/asset/img/breakout.png') no-repeat;
+}
+.game-helicopter {
+    background: url('/asset/img/color.png') no-repeat;
+}
+.game-pacman {
+    background: url('/asset/img/pacman.png') no-repeat;
+}
+.game-snake {
+    background: url('/asset/img/snake.png') no-repeat;
+}
+
+.game-wrapper {
+    width: 100%;
+    border-radius: 10px;
+    border: 10px solid #EFE;
+    background-color: #f4f4f4;
+}
+
+.text-wrapper {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: #EFE;
+    font-weight: bolder;
+    font-family: 'Microsoft YAHEI';
+    margin-top: 10px;
+}
+
+.text-wrapper span {
+    color: #ffea2d;
+}
+
+.text-bottom {
+    position: absolute;
+    background-color: #f0532a;
+    color: #feede9;
+    font-weight: bolder;
+    font-family: 'Microsoft YAHEI';
+    height: 30px;
+    line-height: 30px;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 100px;
+    text-align: center;
+}
+
+@media screen and (max-height: 800px) {
+    .text-bottom {
+        bottom: 30px;
+    }
+}
+
+.logo-game {
+    width: 140px;
+    height: 195px;
+    z-index: -1;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.logo-game-img {
+    width: 140px;
+    height: 195px;
+    background: url(/asset/img/logo_game.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-height: 800px) {
+    .logo-game-img {
+        background-size: 80% 60%;
+    }
+}
+
+.phone-bg {
+    display: none;
+    position: absolute;
+    background: url(/asset/img/main-phone-bg.png) no-repeat;
+    width: 600px;
+    height: 336px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 150px;
+}
+
+@media screen and (max-height: 800px) {
+    .phone-bg {
+        margin-top: 50px;
+    }
+}
+
+.phone {
+    position: absolute;
+    background: url('/asset/img/iphone_white_1.png') no-repeat;
+    width: 275px;
+    height: 577px;
+    left: 50%;
+    margin-left: -137px;
+    top: -700px;
+    display: none;
+    overflow: hidden;
+    transition: top 1s ease-in-out;
+}
+
+.phone-inner {
+    position: absolute;
+    left: 21px;
+    top: 80px;
+    height: 418px;
+    width: 237px;
+    background: url(/asset/img/galaxy-bg.jpg) no-repeat;
+}
+
+.phone .p1,
+.phone .p3 {
+    position: absolute;
+    background-color: #FFF8C8;
+    padding: 5px;
+    border-radius: 10px;
+    width: 166px;
+    margin-left: 65px;
+    line-height: 20px;
+    transition: top 1s ease-in-out;
+    font-size: 13px;
+}
+
+.phone .p1:before,
+.phone .p3:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    background: url(/asset/img/head-3.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 36px;
+    height: 36px;
+    left: -40px;
+    border-radius: 6px;
+}
+
+.phone .p2,
+.phone .p4 {
+    position: absolute;
+    background-color: #D1F3F8;
+    padding: 5px;
+    border-radius: 10px;
+    width: 166px;
+    margin-left: 30px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: top 1s ease-in-out;
+    font-size: 13px;
+}
+
+.phone .p2:after,
+.phone .p4:after {
+    position: absolute;
+    display: block;
+    content: ' ';
+    background: url(/asset/img/head-2.gif) no-repeat;
+    background-size: 100% 100%;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    right: -43px;
+    top: 5px;
+}
+
+.phone .p1 {
+    top: 600px; /*100*/
+}
+
+.phone .p2 {
+    top: 600px; /*170*/
+}
+
+.phone .p3 {
+    top: 600px; /*240*/
+}
+
+.phone .p4 {
+    top: 600px; /*310*/
+}
+
+.btn-go {
+    display: none;
+    position: absolute;
+    width: 110px;
+    height: 102px;
+    background: url(/asset/img/gift.png) no-repeat;
+    left: 50%;
+    margin-left: -60px;
+    bottom: 83px;
+    cursor: pointer;
+    -webkit-animation: scale 1s linear infinite;
+    -o-animation: scale 1s linear infinite;
+    animation: scale 1s linear infinite;
+}
+/* ---- END 首页 ---- */

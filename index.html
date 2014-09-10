@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SSG员工福利大派送</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- [__debug__]
+    <link rel="stylesheet" href="asset/css/index.min.css">
+    [__debug__] -->
+
+    <link rel="stylesheet" href="src/css/common.css"><!-- [__debug__] -->
+    <link rel="stylesheet" href="src/css/index.css"><!-- [__debug__] -->
+</head>
+<body>
+    <!--[if lt IE 9]>
+        <script>
+            window.location.replace('/ie.html');
+        </script>
+    <![endif]-->
+
+    <div class="wrapper">
+        <div class="header"><h1></h1></div>
+        <div class="logo-game" style="display: none">
+            <div class="logo-game-img"></div>
+        </div>
+        <div class="main" style="display: none">
+            <div class="game-center">
+                
+                <ul class="game-wrapper games clearfix">
+                    <li><a title="2048" class="game-1024" href="game/1024/index.html"></a></li>
+                    <li><a title="Flappy Bird" class="game-bird" href="game/bird/index.html"></a></li>
+                    <li><a title="打砖块" class="game-breakout" href="game/breakout/index.html"></a></li>
+                    <li><a title="看你有多色" class="game-helicopter" href="game/color/index.html"></a></li>
+                    <li><a title="吃豆人" class="game-pacman" href="game/pacman/index.html"></a></li>
+                    <li><a title="贪吃蛇" class="game-snake" href="game/snake/index.html"></a></li>
+                </ul>
+
+                <div class="text-wrapper">
+                    共六个小游戏，如果六个小游戏全部过关，那么就能获取神秘奖品，<span>100%中奖哦！</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-tri"></div>
+    <div class="right-tri"></div>
+    <div class="bottom-tri"></div>
+    <div class="text-bottom" style="display: none">
+        史上最轻松的福利大派送！
+    </div>
+
+    <div class="user-info">
+        <span id="userName" class="user-name"></span>
+        <span>|</span>
+        <a href="/user/userLogout.action" class="log-out">
+            <span id="logout">退出</span>
+        </a>
+    </div>
+
+    <div class="phone-bg"></div>
+    <div class="phone">
+        <div class="phone-inner"></div>
+        <div class="p1">
+            华仔，华仔，听说SSG玩玩儿线上小游戏就能抽奖啊~，你抽了吗
+        </div>
+
+        <div class="p2">
+            福利还能这么发？！！难不难？
+        </div>
+
+        <div class="p3">可easy了，内幕消息啊，活动只有一天，好礼品可是限量的！gogogo!</div>
+
+        <div class="p4">那还等啥啊。。果断抢！！！</div>
+
+        <div class="btn-go"></div>
+    </div>
+
+    <div class="footer-mark"></div>
+    
+    <div class="footer">
+        &copy;2014 Baidu 有任何问题请联系<a href="mailto:ssg-elight@baidu.com">ssg-elight@baidu.com</a>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    
+    <!-- [__debug__]
+    <script src="asset/js/index.min.js"></script>
+    [__debug__] -->
+
+    <script src="dep/store.js"></script><!-- [__debug__] -->
+    <script src="src/common.js"></script><!-- [__debug__] -->
+    <script src="src/main.js"></script><!-- [__debug__] -->
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+/*---- 登录 ----*/
+.img-block {
+    width: 362px;
+    height: 326px;
+    margin: 0 auto;
+}
+
+.main-img {
+    background: url(/asset/img/login-main-1.png) no-repeat;
+    width: 362px;
+    height: 326px;
+}
+
+.username-block {
+    width: 190px;
+    height: 36px;
+    margin: 15px auto;
+}
+
+.username-block .text {
+    border-radius: 20px;
+    padding-left: 20px;
+    box-shadow: none;
+}
+
+.username-block .text:focus {
+    box-shadow: 0 0 20px #FFF;
+    -webkit-animation: glow 0.7s linear infinite;;
+    -o-animation: glow 0.7s linear infinite;;
+    animation: glow 0.7s linear infinite;;
+}
+
+.btn-block {
+    width: 132px;
+    margin: 0 auto;
+    line-height: 131px;
+    text-align: center;
+    line-height: 131px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-login {
+    position: absolute;
+    background: url(/asset/img/login-btn-1.png) no-repeat;
+    width: 131px;
+    height: 131px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: transform 0.25s ease-in;
+}
+
+.btn-block:hover .btn-login {
+    transform: rotate(-45deg);
+}
+
+.error-block {
+    margin-top: 10px;
+}
+
+/*---- END 登录 ----*/

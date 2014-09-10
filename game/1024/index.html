@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SSG - 512</title>
+
+  <link href="/asset/css/common.css" rel="stylesheet">
+  <link href="style/main.css" rel="stylesheet">
+  
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">512</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">移动方块，如两方块数字相同会合成一个新方块，达到512即可过关</p>
+      <a class="restart-button">新游戏</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">我还要玩</a>
+          <a class="again-button">再来一局</a>
+          <a class="retry-button">下一游戏</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="game-info">
+    <h3>游戏说明</h3>
+    
+    <p class="info-title">玩法介绍：</p>
+    <p class="info-desc">1. 按右上角的<b>新游戏</b>开始</p>
+    <p class="info-desc">2. 移动方块，如两方块数字相同会合成一个新方块</p>
+
+    <p class="info-title">过关条件：</p>
+    <p class="info-desc">达到<b>512</b>的方块即可过关</p>
+    
+  </div>
+
+  <div class="user-info" style="color:#776e65">
+      <a href="/" style="color:#776e65">首页</a>
+      <span>|</span>
+      <span id="userName" class="user-name" style="color:#776e65"></span>
+      <span>|</span>
+      <a href="/user/userLogout.action" class="log-out" style="color:#776e65"><span id="logout">退出</span></a>
+  </div>
+
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+  <!-- [__debug__]
+  <script src="/asset/js/1024.min.js"></script>
+  [__debug__] -->
+
+  <script src="/dep/store.js"></script><!-- [__debug__] -->
+  <script src="/src/common.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/bind_polyfill.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/classlist_polyfill.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/animframe_polyfill.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/keyboard_input_manager.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/html_actuator.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/grid.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/tile.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/local_storage_manager.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/game_manager.js"></script><!-- [__debug__] -->
+  <script src="/game/1024/js/application.js"></script><!-- [__debug__] -->
+</body>
+</html>

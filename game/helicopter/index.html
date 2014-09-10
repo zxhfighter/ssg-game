@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SSG - 直升机</title>
+    
+    <style type="text/css">
+       #helicopter { height: 600px; width: 900px;}
+       .wrapper {
+          width: 900px;
+          height: 600px;
+          margin: 0 auto;
+          margin-top: 20px;
+          text-align: center;
+          position: relative;
+          padding-left: 300px;
+       }
+
+       .current-score-block {
+         position: absolute;
+         top: 5px;
+         right: 10px;
+       }
+       
+       .score {
+          color: #EC0;
+          font-size: 30px;
+          font-weight: bold;
+       }
+    </style>
+
+    <link href="/src/css/common.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <span style="font-family:SilkScreenBold;"> </span>
+    <div id="helicopter"></div>
+    <div class="current-score-block">
+        <span class="score" id="currentSocre"></span>
+    </div>
+
+    <div id="gamePass" class="game-pass-block" style="position: absolute; left: 365px; top: 40px;">
+      <div class="game-pass"></div>
+      <div id="nextGame" class="next-game"></div>
+    </div>
+  </div>
+  
+  <div class="game-info">
+    <h3>游戏说明</h3>
+    
+    <p class="info-title">玩法介绍：</p>
+    <p class="info-desc">1. 点击右侧游戏界面开始游戏</p>
+    <p class="info-desc">2. 鼠标按下或者按下<b>回车键</b>，直升机上升</p>
+    <p class="info-desc">3. 鼠标松开或者放开<b>回车键</b>，直升机下降</p>
+    <p class="info-desc">4. 如果撞上黑色方块，游戏结束</p>
+    <p class="info-desc">5. 按<b>S</b>键可以切换声音</p>
+
+    <p class="info-title">过关条件：</p>
+    <p class="info-desc">飞行距离达到<b>200m</b></p>
+    
+  </div>
+  
+  <script src="js/helicopter.js"></script>
+
+  <script>
+
+    var families = ['SilkScreenBold', 'SilkScreen'];
+
+    var INIT = (function (HELICOPTER, families) {
+
+      var numLoaded  = 0;
+      var numFonts   = families.length;
+      var helicopter = document.getElementById('helicopter');
+
+      function loaded() {
+        HELICOPTER.init(helicopter, './');
+      };
+
+      function fontLoaded(family, desc) {
+        if (++numLoaded === numFonts) {
+          loaded();
+        }
+      };
+    
+      return {fontLoaded: fontLoaded};
+
+    })(HELICOPTER, families);
+
+    WebFontConfig = { 
+      custom : { 
+        families : families, 
+        urls     : ['./style/silkscreenbold.css', './style/silkscreen.css']
+      },
+      fontactive : INIT.fontLoaded
+    };
+
+  </script>
+
+  <script src="js/webfont.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="/src/common.js"></script>
+  <script src="/dep/store.js"></script>
+</body>
+</html>

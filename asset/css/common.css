@@ -1,0 +1,352 @@
+/*---- 公共 ----*/
+body, div, p, dl, dt, dd, ul, ol, li, hr, pre, fieldset, legend,
+input, button, textarea, form, img, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    padding:0;
+}
+
+fieldset, iframe, img {
+    border: 0;
+}
+
+a img {
+    display:block;
+}
+
+li {list-style: none;}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    display: block;
+    line-height: 0;
+    height: 0;
+    clear: both;
+    content: '';
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    background-color: #1bbdb8;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.header {
+    height: 100px;
+}
+
+.header h1 {
+    position: absolute;
+    background: url(/asset/img/ssg-logo.png) no-repeat;
+    background-size: 80% 80%;
+    width: 173px;
+    height: 110px;
+    left: 20px;
+    top: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.footer a {
+    color: #FFF;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer-mark {
+    height: 30px;
+    background-color: #eeaa33;
+    position: absolute;
+    background: url(/asset/img/login-bottom-1.png) no-repeat;
+    width: 306px;
+    height: 111px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.main {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.text-bottom {
+    position: absolute;
+    background-color: #f0532a;
+    color: #feede9;
+    font-weight: bolder;
+    font-family: 'Microsoft YAHEI';
+    height: 30px;
+    line-height: 30px;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 100px;
+    text-align: center;
+}
+
+@media screen and (max-height: 800px) {
+    .text-bottom {
+        bottom: 55px;
+    }
+}
+
+.left-tri {
+    position: absolute;
+    width:143px;
+    height: 293px;
+    left: -1px;
+    top: 50%;
+    margin-top: -146px;
+    background: url(/asset/img/left-tri.png) no-repeat;
+}
+
+.right-tri {
+    position: absolute;
+    width:144px;
+    height: 303px;
+    right: -1px;
+    top: 50%;
+    margin-top: -151px;
+    background: url(/asset/img/right-tri.png) no-repeat;
+}
+
+.bottom-tri {
+    position: absolute;
+    width: 68px;
+    height: 34px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -34px;
+    background: url(/asset/img/bottom-tri.png) no-repeat;
+}
+
+.game-info {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    padding: 20px;
+    border: 1px solid #bce8f1;
+    background-color: #d9edf7;
+    color: #3a87ad;
+    font-size: 12px;
+}
+
+.game-info h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-info p {
+    margin: 10px 0;
+}
+
+.game-info .info-jump a {
+  color: #009;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-weight: bolder;
+  font-family: 微软雅黑;
+  text-decoration: underline;
+}
+
+.info-title {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.info-desc {
+    text-indent: 2em;
+}
+
+.info-desc b {
+    color: #F00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.game-pass {
+  position: absolute;
+  width: 288px;
+  height: 99px;
+  left: 258px;
+  top: 194px;
+  background-image: url(/asset/img/game-passed.png);
+  background-size: 100% auto;
+  background-repeat: none;
+  z-index: 100;
+  display: none;
+}
+
+.next-game {
+  position: absolute;
+  width: 107px;
+  height: 38px;
+  left: 345px;
+  top: 345px;
+  background-image: url(/asset/img/next-game.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+}
+
+.main {
+    width: 100%;
+}
+
+.user-info {
+    color: #FFF;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 12px;
+}
+
+.user-name {
+    color: #EFE;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.log-out {
+    color: #EFE;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.error-block {
+    color: #D66;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.5;
+  z-index: 200;
+}
+
+.dialog {
+  width: 600px;
+  border: 1px solid #d6e9c6;
+  background-color: #dff0d8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -150px;
+  z-index: 300;
+  box-shadow: 0 0 20px #fff;
+  color: #355E01;
+}
+
+.dialog-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 20px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #d6e9c6
+}
+
+.dialog-content {
+  font-size: 14px;
+  padding: 20px;
+}
+
+.dialog-foot {
+  padding: 10px;
+}
+
+.dialog-ok {
+  width: 72px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  background-color: #35aa47;
+  cursor: pointer;
+  float: right;
+}
+
+.text {
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 5px;
+    color: #666;
+    border: 1px solid #7299A7;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0 0 10px #FFF;
+}
+
+@-webkit-keyframes glow {
+    0% { box-shadow: 0 0 2px #FFF; }
+    50% { box-shadow: 0 0 10px #FFF; }
+    75% { box-shadow: 0 0 15px #FFF; }
+    100% { box-shadow: 0 0 2px #FFF; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 2px #FFF; }
+    50% { box-shadow: 0 0 10px #FFF; }
+    75% { box-shadow: 0 0 15px #FFF; }
+    100% { box-shadow: 0 0 2px #FFF; }
+}
+
+@-webkit-keyframes scale {
+    0% { transform: scale(1, 1); }
+    25% { transform: scale(1.2, 1.2); }
+    50% { transform: scale(1.5, 1.5); }
+    75% { transform: scale(1.2, 1.2); }
+    100% { transform: scale(1, 1); }
+}
+
+@keyframes scale {
+    0% { transform: scale(1, 1); }
+    25% { transform: scale(1.2, 1.2); }
+    50% { transform: scale(1.5, 1.5); }
+    75% { transform: scale(1.2, 1.2); }
+    100% { transform: scale(1, 1); }
+}
+/*---- END 公共 ----*/
