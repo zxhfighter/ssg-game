@@ -105,7 +105,9 @@ SSG.Index = (function(){
         }
 
         if (prizeId) {
-            jQuery('.prize-info').html('（你已经获取了奖品：<b>' + SSG.PRIZES[prizeId] + '</b>）');
+            jQuery('.prizeName').text(SSG.PRIZES[prizeId]);
+            jQuery('#noPassTip').hide();
+            jQuery('#passTip').show();
         }
 
         jQuery('#userName').text(userName);

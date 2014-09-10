@@ -90,6 +90,12 @@
     color: #ffea2d;
 }
 
+.text-wrapper a {
+    color: #0033FF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
 .text-bottom {
     position: absolute;
     background-color: #f0532a;
