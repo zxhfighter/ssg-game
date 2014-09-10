@@ -1,2 +1,11 @@
-/asset/*
-/node_modules/*
+asset
+.DS_Store
+node_modules
+bower_components
+tmp
+*~
+*.log
+*.tmp
+*.bak
+*.swp
+*.so
