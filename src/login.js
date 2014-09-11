@@ -4,6 +4,23 @@ SSG.Login = (function(){
     function init() {
         jQuery('#UserName').focus();
         bindEvents();
+
+        clearLocalStorage();
+    }
+
+    // 清除前端缓存
+    function clearLocalStorage() {
+        // 设置所有游戏未通关
+        for (var i = 1; i <= 6; i++) {
+            store.set('gameId-' + i, false);
+        }
+
+        // 如果1024已经通过，需要清空数据复原到出事状态
+        var gameState = JSON.parse(localStorage.gameState);
+        var defaultState = '{"grid":{"size":4,"cells":[[null,null,null,{"position":{"x":0,"y":3},"value":2}],[{"position":{"x":1,"y":0},"value":2},null,null,null],[null,null,null,null],[null,null,null,null]]},"score":0,"over":false,"won":false,"keepPlaying":false}';
+        if (gameState.won) {
+            localStorage.gameState = defaultState;
+        }
     }
 
     // 绑定事件
@@ -69,18 +86,21 @@ SSG.Login = (function(){
                         window.location = '/';
                     }
                 }
+                else if (data.status === 1) {
+                    showErrorMsg(data.msg || '登录失败，请仔细检查输入邮箱哦！');
+                    jQuery('#loginText').text('LOGIN');
+                    window.location = 'http://neitui.baidu.com/';
+                }
                 else {
                     var msg = data.msg || '登录失败，请仔细检查输入邮箱哦！';
                     showErrorMsg(msg);
 
                     jQuery('#loginText').text('LOGIN');
-                    // jQuery('#Login').on('click', login);
                 }
             },
             function (data) {
                 showErrorMsg('网络或者其他未知错误，请重试！');
                 jQuery('#loginText').text('LOGIN');
-                // jQuery('#Login').on('click', login);
             }
         );
     }

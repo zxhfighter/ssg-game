@@ -1,4 +1,5 @@
 asset
+output
 .DS_Store
 node_modules
 bower_components
