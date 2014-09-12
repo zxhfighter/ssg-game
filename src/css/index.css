@@ -3,6 +3,7 @@
     width: 632px;
     margin: 0 auto;
     margin-top: 20px;
+    position: relative;
 }
 
 @media screen and (max-height: 800px) {
@@ -261,5 +262,49 @@
     -webkit-animation: scale 1s linear infinite;
     -o-animation: scale 1s linear infinite;
     animation: scale 1s linear infinite;
+}
+
+.left-top-dot {
+    position: absolute;
+    background: url('/asset/img/gift-left.png') no-repeat;
+    left: -10px;
+    top: -30px;
+    width: 82px;
+    height: 80px;
+    background-size: 60% 60%;
+    z-index: -1;
+}
+
+.right-top-dot {
+    position: absolute;
+    background: url('/asset/img/gift-right.png') no-repeat;
+    right: -60px;
+    top: -30px;
+    width: 82px;
+    height: 80px;
+    background-size: 60% 60%;
+    z-index: -1;
+}
+
+.left-bottom-dot {
+    position: absolute;
+    background: url('/asset/img/cheese-left.png') no-repeat;
+    left: -15px;
+    bottom: -10px;
+    width: 82px;
+    height: 80px;
+    background-size: 60% 60%;
+    z-index: -1;
+}
+
+.right-bottom-dot {
+    position: absolute;
+    background: url('/asset/img/cheese-right.png') no-repeat;
+    right: -60px;
+    bottom: -15px;
+    width: 82px;
+    height: 80px;
+    background-size: 60% 60%;
+    z-index: -1;
 }
 /* ---- END 首页 ---- */

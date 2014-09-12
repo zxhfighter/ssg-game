@@ -44,19 +44,19 @@ SSG.Index = (function(){
                 jQuery('.p1').css('top', '100px');
             });
 
-            delay(3000, function () {
+            delay(2000, function () {
                 jQuery('.p2').css('top', '170px');
             });
 
-            delay(6000, function () {
+            delay(4000, function () {
                 jQuery('.p3').css('top', '260px');
             });
             
-            delay(9000, function () {
+            delay(6000, function () {
                 jQuery('.p4').css('top', '330px');
             });
 
-            delay(12000, function () {
+            delay(8000, function () {
                 jQuery('.btn-go').fadeIn();
                 
             });

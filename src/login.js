@@ -16,9 +16,10 @@ SSG.Login = (function(){
         }
 
         // 如果1024已经通过，需要清空数据复原到出事状态
-        var gameState = JSON.parse(localStorage.gameState);
+
+        var gameState = localStorage.gameState ? JSON.parse(localStorage.gameState) : null;
         var defaultState = '{"grid":{"size":4,"cells":[[null,null,null,{"position":{"x":0,"y":3},"value":2}],[{"position":{"x":1,"y":0},"value":2},null,null,null],[null,null,null,null],[null,null,null,null]]},"score":0,"over":false,"won":false,"keepPlaying":false}';
-        if (gameState.won) {
+        if (gameState && gameState.won) {
             localStorage.gameState = defaultState;
         }
     }
@@ -87,9 +88,9 @@ SSG.Login = (function(){
                     }
                 }
                 else if (data.status === 1) {
-                    showErrorMsg(data.msg || '登录失败，请仔细检查输入邮箱哦！');
-                    jQuery('#loginText').text('LOGIN');
-                    window.location = 'http://neitui.baidu.com/';
+                    SSG.Util.alert('亲，本次福利大派送仅SSG所属部门才能参与哦~ <img src="/asset/img/no-ssg.GIF" />', function () {
+                        window.location = 'http://neitui.baidu.com/';
+                    });
                 }
                 else {
                     var msg = data.msg || '登录失败，请仔细检查输入邮箱哦！';
